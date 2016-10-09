@@ -9,7 +9,8 @@
  
 ##3.Category
 
-  - React JS
+  - React, ReactNative
   - Ruby on Rails
-
+  - Node JS
+  - MAC IOS
 열심히 코딩하여 능력있는 개발자가 되겠숩니다.
