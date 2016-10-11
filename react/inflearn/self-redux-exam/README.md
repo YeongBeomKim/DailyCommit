@@ -42,3 +42,5 @@ Redux 파일구조 코딩하기!
         [mapDispatchToProps] : 디스패치를 파라미터
         [mergeProps] : 스테이트와 디스패치둘다.
         [options] : 객체형태 pure withRef
+
+강의 : inflearn.com 리액트 강의 참고.
