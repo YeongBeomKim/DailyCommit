@@ -10,7 +10,8 @@ class CreateItem extends Component {
         super(props);
         this.state = {
           item: '',
-          price: ''
+          price: '',
+          key: 0
         };
         this.handleChange=this.handleChange.bind(this);
         this.handleClick=this.handleClick.bind(this);
@@ -24,12 +25,14 @@ class CreateItem extends Component {
       const data = {
         item: this.state.item,
         price: this.state.price,
-        number: 1
+        number: 1,
+        key: this.state.key
       }
       this.props.onCreate(data);
       this.setState({
         item: '',
-        price: ''
+        price: '',
+        key: this.state.key+1
       });
     }
     render() {

@@ -10,23 +10,7 @@ const defaultProps = {
 class ItemInfo extends Component {
     constructor(props) {
         super(props);
-
-        this.handlePlus=this.handlePlus.bind(this);
-        this.handleSubstract=this.handleSubstract.bind(this);
     }
-
-    handlePlus(){
-      const num = this.props.data.number+1;
-      console.log(this.props.key);
-      const key = this.props.key;
-      this.props.onEdit(num,key);
-    }
-    handleSubstract(){
-      const num = this.props.data.number-1;
-      const key = this.props.key;
-      this.props.onEdit(num,key);
-    }
-
     render() {
         console.log(this.props)
         return(
@@ -35,8 +19,8 @@ class ItemInfo extends Component {
             <div>
               {this.props.data.number}
 
-              <button onClick={this.handlePlus}>+</button>
-              <button onClick={this.handleSubstract}>-</button>
+              <button onClick={this.props.onPlus}>+</button>
+              <button onClick={this.props.onSubstract}>-</button>
             </div>
           </div>
         );

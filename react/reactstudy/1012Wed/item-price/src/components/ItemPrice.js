@@ -12,13 +12,32 @@ const defaultProps = {
 class ItemPrice extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+          number: -1
+        };
+        this.handlePlus=this.handlePlus.bind(this);
+        this.handleSubstract=this.handleSubstract.bind(this);
     }
+    handlePlus(key){
+      console.log(this.props.itemDataBase[key]);
+      const data = this.props.itemDataBase[key];
+      this.setState({
+        number: data.number+1
+      });
+      this.props.updateNum(this.state.number,key);
+    }
+    handleSubstract(key){
+      const data = this.props.itemDataBase[key];
+      this.setState({
+        number: data.number-1
+      });
+      this.props.updateNum(this.state.number,key);
+    }
+
     render() {
       const mapToData = (database) => {
         return database.map((data,i) => {
-          return (
-            <ItemInfo key={i} data={data}onEdit={()=>{this.props.updateNum()}}/>
-          )
+          return (<ItemInfo key={i} data={data}onPlus={(i)=>{this.handlePlus(i)}}onSubstract={(i)=>{this.handleSubstract(i)}}/>)
         }
       )};
         return(

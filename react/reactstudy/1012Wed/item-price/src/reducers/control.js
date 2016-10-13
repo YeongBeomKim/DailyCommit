@@ -1,10 +1,7 @@
 import * as types from '../actions/ActionTypes';
 import update from 'react-addons-update';
 const initialState = {
-  itemDataBase: [
-    {item: '',price: '',number: 1},
-    {}
-  ]
+  itemDataBase: []
 };
 
 export default function control(state=initialState,action){
@@ -17,14 +14,10 @@ export default function control(state=initialState,action){
         })
       };
       case types.UPDATENUM:
+        const data = state.itemDataBase[action.key];
         return{
-          ...state,
-          itemDataBase: update(state.itemDataBase,
-          {
-            [action.key]: {
-              number: {$set: action.number}
-            }
-          })
+          ...data,
+          number: action.number
         };
     default:
       return state;
