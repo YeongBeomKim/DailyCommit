@@ -10,9 +10,7 @@ const defaultProps = {
   onSubstract: ()=>{console.error('onSubstract is not define')}
 };
 class ItemInfo extends Component {
-    constructor(props) {
-        super(props);
-    }
+
     render() {
         return(
           <div>

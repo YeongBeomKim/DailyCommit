@@ -5,10 +5,6 @@ import ItemDetails from './ItemDetails';
 import * as actions from '../actions';
 import {connect} from 'react-redux';
 
-const propTypes = {
-};
-const defaultProps = {
-};
 class ItemPrice extends Component {
     constructor(props) {
         super(props);
@@ -55,8 +51,7 @@ class ItemPrice extends Component {
       );
     }
 }
-ItemPrice.propTypes = propTypes;
-ItemPrice.defaultProps = defaultProps;
+
 const mapStateToProps = (state) => {
   return{
     itemDataBase: state.control.itemDataBase
