@@ -40,8 +40,8 @@ class CreateItem extends Component {
             <div>
               <h3>아이템 추가하기</h3>
               <div>
-                <input name='item' value={this.state.item}placeholder='제품'onChange={this.handleChange}/>
-                <input name='price'value={this.state.price}placeholder='가격'onChange={this.handleChange}/>
+                <input type='text'name='item' value={this.state.item}placeholder='제품'onChange={this.handleChange}/>
+                <input type='number'name='price'value={this.state.price}placeholder='가격(숫자입력)'onChange={this.handleChange}/>
                 <button onClick={this.handleClick}>아이템추가</button>
               </div>
             </div>

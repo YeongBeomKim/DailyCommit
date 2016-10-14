@@ -13,3 +13,9 @@ export function updateNum(number,key){
     key
   }
 }
+export function deleteItem(key){
+  return{
+    type: types.DELETEITEM,
+    key
+  }
+}

@@ -14,11 +14,21 @@ export default function control(state=initialState,action){
         })
       };
       case types.UPDATENUM:
-        const data = state.itemDataBase[action.key];
         return{
-          ...data,
-          number: action.number
+          ...state,
+          itemDataBase: update(state.itemDataBase,{
+            [action.key]: {
+              number: {$set: action.number}
+            }
+          })
         };
+      case types.DELETEITEM:
+        return{
+          ...state,
+          itemDataBase: update(state.itemDataBase,{
+            $splice: [[action.key,1]]
+          })
+        }
     default:
       return state;
   }
