@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import CreateItem from './CreateItem';
 import ItemInfo from './ItemInfo';
-import ItemDetails from './ItemDetails';
 import * as actions from '../actions';
 import {connect} from 'react-redux';
 
